@@ -1,6 +1,6 @@
 # My_gulp
 
-#list:
+List:
   del,
   browser-sync,
   gulp-autoprefixer,
