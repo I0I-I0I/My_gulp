@@ -1,11 +1,11 @@
-var gulp          = require('gulp')
+var   gulp          = require('gulp')
 		sass          = require('gulp-sass'),
 		browserSync   = require('browser-sync'),
-        del           = require('del');// Local Server
+      del           = require('del');// Local Server
 		notify        = require('gulp-notify'),
 		cleancss      = require('gulp-clean-css'),
 		rename        = require('gulp-rename'),
-        autoprefixer  = require('gulp-autoprefixer');
+      autoprefixer  = require('gulp-autoprefixer');
 
 // Local Server
 gulp.task('browser-sync', function() {
@@ -15,9 +15,6 @@ gulp.task('browser-sync', function() {
 		},
 		notify: false,
 		//online: false,
-		// open: false,
-		// Work Offline Without Internet Connection
-		// tunnel: true, tunnel: "projectname", // Demonstration page: http://projectname.localtunnel.me
 	})
 });
 
@@ -44,6 +41,7 @@ gulp.task('watch', function() {
 	gulp.watch('app/sass/**/*.sass', gulp.parallel('styles'));
 	gulp.watch('app/*.html', gulp.parallel('code'));
 });
+
 false ? gulp.task('default', gulp.parallel('styles', 'browser-sync', 'watch')) 
 				: gulp.task('default', gulp.parallel('styles', 'browser-sync', 'watch'));
 
